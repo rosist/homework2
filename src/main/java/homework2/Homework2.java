@@ -1,53 +1,53 @@
 package homework2;
 
+import java.util.Scanner;
+
 public class Homework2 {
     public static void main(String[] args) {
 
-        System.out.println();
+        String test = "Your name is <my name>.";
+        System.out.println(test);
 
-        String article = "Ask for room cleaning";
-        System.out.println("Original string: " + article);
+        Scanner scanner = new Scanner(System.in);
+        String yourName = scanner.nextLine();
 
-        String result = article.replace("Ask for", "Request a");
-        System.out.println("New string: " + result);
+        String result = test.replace("<my name>", yourName);
+        System.out.println(result + '\n');
 
-        System.out.println();
+        String str1 = "Enter your first phrase: ";
+        System.out.println(str1);
+        Scanner scan1 = new Scanner(System.in);
+        String phrase1 = scanner.nextLine();
 
-        String str1 = "This is exercise 1";
-        String str2 = "This Is Exercise 1";
+        String str2 = "Enter your second phrase: ";
+        System.out.println(str2);
+        Scanner scan2 = new Scanner(System.in);
+        String phrase2 = scanner.nextLine();
 
-        System.out.println("String 1: " +str1);
-        System.out.println("String 2: " +str2);
+        System.out.println(phrase1.equalsIgnoreCase(phrase2)+"\n");
 
-        int result2 = str1.compareToIgnoreCase(str2);
-
-        if (result2 < 0){
-            System.out.println("\"" + str1 + "\"" + " is less than " + "\"" + str2 + "\"");
-        }
-        else if (result2 == 0){
-            System.out.println("\"" + str1 + "\"" + " is equal to " + "\"" + str2 + "\"");
-        }
-        else {
-            System.out.println("\"" + str1 + "\"" + " is greater than " + "\"" + str2 + "\"");
-        }
-
-        System.out.println();
-
-        String words = "This is a test string.";
+        String words = "Enter your phrase here: ";
         System.out.println(words);
-        int countWords = words.split("\\s").length;
-        System.out.println("There are " +countWords+ " words in the phrase.");
+        Scanner scan = new Scanner(System.in);
 
-        System.out.println();
+        String wordsNum = scanner.nextLine();
+        System.out.println(wordsNum);
 
-        String s1="You are ";
-        String s2="smart!";
-        String s3=s1.concat(s2);
+        int countWords = wordsNum.split("\\s").length;
+        System.out.println("There are " +countWords+ " words in this phrase."+'\n');
+
+        String s1 = "Enter the beginning of your text: ";
+        System.out.println(s1);
+        Scanner scanner1 = new Scanner(System.in);
+        String beginningText = scanner.nextLine();
+
+        String s2 = "Enter the end of your text: ";
+        System.out.println(s2);
+        Scanner end = new Scanner(System.in);
+        String endText = scanner.nextLine();
+
+        String s3 = String.join(    " " , beginningText, endText);
         System.out.println(s3);
-
-
-
-
 
     }
 }
