@@ -22,13 +22,13 @@ public class Homework2 {
         Scanner scan1 = new Scanner(System.in);
         String phrase1 = scanner.nextLine();
 
-        String str2 = "Enter your second phrase: ";
+        String str2 = "Enter the phrase you want to compare with: ";
         System.out.println(str2);
 
         Scanner scan2 = new Scanner(System.in);
         String phrase2 = scanner.nextLine();
 
-        System.out.println(phrase1.equalsIgnoreCase(phrase2)+"\n");
+        System.out.println("Both phrases are equal:" + phrase1.equalsIgnoreCase(phrase2)+"\n");
 
         //task 3
         String input = "Enter your sentence here: ";
